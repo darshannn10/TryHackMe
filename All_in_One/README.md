@@ -1,10 +1,28 @@
-# [All in One](https://tryhackme.com/room/allinonemj)
+#  [0day CTF](https://tryhackme.com/room/0day)
+
+> Darshan Patel
+
+## Overview
+
+| Tables | Description |
+| ------ | ----------- |
+| Challenge Name | All in One|
+| Difficulty | Easy |
+| Tags | security, i7md, wordpress. privesc|
+
+---
 
 ![All in one](All_in_One.png)
 
-IP=`10.10.125.191`
+```bash
+export IP=10.10.125.191
+```
 
-Ports:
+```bash
+nmap -vvv -p 22,80 -sC -sV -A -v -oN nmap/initial.nmap 10.10.125.191
+```
+
+Open-Ports:
 ```
 21 ftp --> Anonymous Login enabled
 22 ssh
