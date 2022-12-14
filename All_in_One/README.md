@@ -1,4 +1,4 @@
-#  [0day CTF](https://tryhackme.com/room/0day)
+#  [All in One](https://tryhackme.com/room/allinonemj)
 
 > Darshan Patel
 
