@@ -1,6 +1,14 @@
-# Archangel CTF [TryHackMe](https://tryhackme.com/room/archangel)
+# [Archangel CTF}(https://tryhackme.com/room/archangel)
+> Darshan Patel
 
-![Logo](./assets/archangel.jpeg)
+## Overview
+
+| Tables | Description |
+| ------ | ----------- |
+| Challenge Name | Archangel |
+| Difficulty | Easy |
+| Tags | security, lfi, boot2root, priv-esc|
+
 
 ---
 
@@ -138,6 +146,5 @@ $ ./backup
 
 ![PATH](./assets/path_exploit.png)
 
-And we are _**complete!**_
+And we've _**completed**_ this room!
 
-![archangel](https://thumbs.dreamstime.com/b/archangel-michael-angel-divine-light-68373659.jpg)
