@@ -1,4 +1,14 @@
-# 0day CTF [TryHackMe](https://tryhackme.com/room/0day)
+#  [0day CTF](https://tryhackme.com/room/0day)
+
+> Darshan Patel
+
+## Overview
+
+| Tables | Description |
+| ------ | ----------- |
+| Challenge Name | 0day |
+| Difficulty | Medium |
+| Tags | CVE, kernel exploit, shell shock|
 
 ---
 
@@ -395,5 +405,3 @@ One somewhat obscured stackoverflow answer pointed to possible `PATH` misconfigu
 Run the newly compilied file, and viola! We now are root and can access the root flag!
 
 ---
-
-![](https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Shellshock-bug.svg/1200px-Shellshock-bug.svg.png)
