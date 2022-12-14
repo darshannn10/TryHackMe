@@ -1,4 +1,4 @@
-# [Archangel CTF}(https://tryhackme.com/room/archangel)
+# [Archangel CTF](https://tryhackme.com/room/archangel)
 > Darshan Patel
 
 ## Overview
