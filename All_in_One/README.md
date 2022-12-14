@@ -19,7 +19,7 @@ export IP=10.10.125.191
 ```
 
 ```bash
-nmap -vvv -p 22,80 -sC -sV -A -v -oN nmap/initial.nmap 10.10.125.191
+nmap -vvv -p- -sC -sV -A -v -oN nmap/initial.nmap 10.10.125.191
 ```
 
 Open-Ports:
