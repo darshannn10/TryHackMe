@@ -1,8 +1,20 @@
-# Agent Sudo
+#  [Agent Sudo]([https://tryhackme.com/room/0day](https://tryhackme.com/room/agentsudoctf))
+> Darshan Patel
 
-IP=`10.10.20.177`
+## Overview
 
-Ports:
+| Tables | Description |
+| ------ | ----------- |
+| Challenge Name | Agent Sudo |
+| Difficulty | Easy |
+| Tags | enumerate, exploit, brute-force, hash cracking|
+
+---
+
+```bash
+export IP=10.10.20.177
+```
+Open-Ports:
 ```
 21 ftp
 22 ssh
