@@ -1,11 +1,11 @@
-# [Bounty Hunter](https://tryhackme.com/room/cowboyhacker)
+# [Bounty Hacker](https://tryhackme.com/room/cowboyhacker)
 > Darshan Patel
 
 ## Overview
 
 | Tables | Description |
 | ------ | ----------- |
-| Challenge Name | Bounty Hunter |
+| Challenge Name | Bounty Hacker |
 | Difficulty | Medium |
 | Tags | linux, tar, priv-esc, security|
 
