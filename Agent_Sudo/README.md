@@ -14,6 +14,10 @@
 ```bash
 export IP=10.10.20.177
 ```
+
+```bash
+nmap -vvv -p- -sC -sV -A -v -oN nmap/initial.nmap 10.10.20.177
+```
 Open-Ports:
 ```
 21 ftp
