@@ -1,4 +1,4 @@
-# Bounty Hunter CTF TryHackMe
+# [Bounty Hunter](https://tryhackme.com/room/cowboyhacker)
 > Darshan Patel
 
 ## Overview
