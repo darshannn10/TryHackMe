@@ -1,10 +1,16 @@
-# Attacktive Directory [TryHackMe](https://tryhackme.com/room/attacktivedirectory)
+# [Attacktive Directory](https://tryhackme.com/room/attacktivedirectory)
 
---------------------------------------------------------------------------------
+> Darshan Patel
 
-![](https://jumpcloud.com/wp-content/uploads/2016/07/AD1.png)
+## Overview
 
---------------------------------------------------------------------------------
+| Tables | Description |
+| ------ | ----------- |
+| Challenge Name | Attacktive Directory |
+| Difficulty | Medium |
+| Tags | Active Directry, Kerberos, SMB |
+
+---
 
 ## Index
 
@@ -250,5 +256,3 @@ evil-winrm -u administrator -i $IP -H <HASH>
 ```
 
 And we are done!!
-
-![](https://alchetron.com/cdn/cerberus-2360fe60-cbc6-4721-8712-c8a1ba13a64-resize-750.png)
