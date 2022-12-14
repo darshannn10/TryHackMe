@@ -1,9 +1,14 @@
-# Boiler CTF [TryHackMe](https://tryhackme.com/room/boilerctf2)
+# [Boiler CTF](https://tryhackme.com/room/boilerctf2)
 
----
+> Darshan Patel
 
-![](./.assets/logo.jpeg)
+## Overview
 
+| Tables | Description |
+| ------ | ----------- |
+| Challenge Name | Bolier CTF |
+| Difficulty | Medium |
+| Tags | ctf, ftp, ssh, webmin|
 ---
 
 ## Index
