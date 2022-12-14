@@ -1,9 +1,15 @@
-# Billy Joel's [Blog](https://tryhackme.com/room/blog)
+# [Blog](https://tryhackme.com/room/blog)
 
----
 
-![](./.assets/logo.png)
+> Darshan Patel
 
+## Overview
+
+| Tables | Description |
+| ------ | ----------- |
+| Challenge Name | BLog |
+| Difficulty | Medium |
+| Tags | CVE-2019-8943, wordpress, blog, web|
 ---
 
 ```bash
@@ -437,4 +443,3 @@ Since we know from the questions hint what format the directory is in and as it 
 
 And this box is complete!!
 
-![](https://img.cdandlp.com/2018/04/imgL/119140817.jpg)
