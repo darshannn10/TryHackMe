@@ -1,9 +1,14 @@
-# Bolt CTF [TryHackMe](https://tryhackme.com/room/bolt)
+# [Bolt](https://tryhackme.com/room/bolt)
 
----
+> Darshan Patel
 
-![](./.assets/logo.png)
+## Overview
 
+| Tables | Description |
+| ------ | ----------- |
+| Challenge Name | Bolt |
+| Difficulty | Medium |
+| Tags | security, web, bolt, RCE|
 ---
 
 ## Index
@@ -232,5 +237,3 @@ Debugging external scripts is something I'd recommend practicing as it shows fir
 Highly recommended!
 
 ---
-
-![](./.assets/bolt.png)
