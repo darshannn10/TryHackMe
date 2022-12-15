@@ -1,8 +1,15 @@
-# ColdBox Room [TryHackMe](https://tryhackme.com/room/colddboxeasy)
+# [ColddBox:Easy](https://tryhackme.com/room/colddboxeasy)
 
----
+> Darshan Patel
 
-![Coldbox](./.assets/ColdboxEasy.png)
+## Overview
+
+| Tables | Description |
+| ------ | ----------- |
+| Challenge Name | Colddbox:Easy |
+| Difficulty | Easy |
+| Tags | security, box, priv-esc, wordpress |
+
 
 ---
 
@@ -94,4 +101,4 @@ And we are _**complete!**_
 
 Great practice for beginners like myself
 
-![ice box](https://www.muralesyvinilos.com/murales/cubitos_de_hielo_muralesyvinilos_14152670__Monthly_XXL.jpg)
+
