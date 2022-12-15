@@ -1,4 +1,4 @@
-# [Intro to PWNtools]](https://tryhackme.com/room/introtopwntools)
+# [Intro to PWNtools](https://tryhackme.com/room/introtopwntools)
 
 > Darshan Patel
 
