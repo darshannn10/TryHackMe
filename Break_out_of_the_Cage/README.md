@@ -1,14 +1,26 @@
-# [Break out of the Cage](https://tryhackme.com/room/breakoutthecage1) TryHackMe Room
+# [Break Out The Cage](https://tryhackme.com/room/breakoutthecage1)
 
-![Nicolas Cage](https://tryhackme-images.s3.amazonaws.com/room-icons/29ef13afaef5de5b8f1a27653f9d7a2d.jpeg)
+> Darshan Patel
 
-IP=`10.10.103.237`
+## Overview
 
-Ports
+| Tables | Description |
+| ------ | ----------- |
+| Challenge Name | Break Out The Cage |
+| Difficulty | Medium |
+| Tags | python, rot13, stego, mail|
+
+---
+```
+$IP=10.10.103.237
+```
+
 ```
 nmap -sV -sC -v $IP -oN initial.nmap
 nmap -p- -T4 -v $IP -oN all_ports.nmap
-
+```
+Ports
+```
 21 ftp
 22 ssh
 80 http
