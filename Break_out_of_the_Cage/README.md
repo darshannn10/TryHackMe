@@ -7,7 +7,7 @@
 | Tables | Description |
 | ------ | ----------- |
 | Challenge Name | Break Out The Cage |
-| Difficulty | Medium |
+| Difficulty | Easy |
 | Tags | python, rot13, stego, mail|
 
 ---
