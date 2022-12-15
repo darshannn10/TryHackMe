@@ -1,6 +1,14 @@
-# h4cked room on [TryHackMe](https://tryhackme.com/room/h4cked)
+# [h4cked](https://tryhackme.com/room/h4cked)
 
-![logo](https://i.ibb.co/Tvjg7t9/banner.png)
+> Darshan Patel
+
+## Overview
+
+| Tables | Description |
+| ------ | ----------- |
+| Challenge Name | h4ckef |
+| Difficulty | Easy |
+| Tags | security, forensics, wireshark, pcap|
 
 ---
 
@@ -111,4 +119,4 @@ And we can now navigate to `/root/Reptile` and grab the flag!
 
 _**Complete!**_
 
-![](./assets/hacker.jpg)
+
