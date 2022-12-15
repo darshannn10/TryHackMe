@@ -1,5 +1,13 @@
 # [Chocolate Factory](https://tryhackme.com/room/chocolatefactory) 
+> Darshan Patel
 
+## Overview
+
+| Tables | Description |
+| ------ | ----------- |
+| Challenge Name | Chocolate factory |
+| Difficulty | Easy |
+| Tags | chocolatefactory, ctf, stego, priv-esc|
 
 ---
 
