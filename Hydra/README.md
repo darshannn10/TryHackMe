@@ -1,7 +1,16 @@
-# Introduction to Hydra [TryHackMe](https://tryhackme.com/room/hydra)
+# [Hydra](https://tryhackme.com/room/hydra)
+
+> Darshan Patel
+
+## Overview
+
+| Tables | Description |
+| ------ | ----------- |
+| Challenge Name | Hydra |
+| Difficulty | Easy |
+| Tags | brute-force, hydra|
 
 ---
-
 ```bash
 export IP=10.10.61.134
 ```
