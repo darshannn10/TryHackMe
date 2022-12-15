@@ -1,8 +1,14 @@
-# Git and Crumpets [TryHackMe](https://tryhackme.com/room/gitandcrumpets)
+# [Git and Crumpets](https://tryhackme.com/room/gitandcrumpets)
 
----
+> Darshan Patel
 
-![](https://i.imgur.com/7X22aYB.png)
+## Overview
+
+| Tables | Description |
+| ------ | ----------- |
+| Challenge Name | Git and Crumpets |
+| Difficulty | Medium |
+| Tags | security, ctf, git, hardened|
 
 ---
 
