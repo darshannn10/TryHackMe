@@ -1,6 +1,6 @@
-# [Chocolate Factory](https://tryhackme.com/room/chocolatefactory) TryHackMe CTF
+# [Chocolate Factory](https://tryhackme.com/room/chocolatefactory) 
 
-![logo](./assets/golden_ticket.png)
+
 ---
 
 ```shell
@@ -104,4 +104,3 @@ Nope, the decoding library _is not even loaded_ onto the box and instead of tryi
 
 And this room is _**complete!**_
 
-![willy wonka](./assets/willy_wonka.jpg)
