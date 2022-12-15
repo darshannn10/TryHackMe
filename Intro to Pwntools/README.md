@@ -1,10 +1,16 @@
-# Intro to PWNtools [TryHackMe](https://tryhackme.com/room/introtopwntools)
+# [Intro to PWNtools]](https://tryhackme.com/room/introtopwntools)
 
---------------------------------------------------------------------------------
+> Darshan Patel
 
-![](./.assets/logo.png)
+## Overview
 
---------------------------------------------------------------------------------
+| Tables | Description |
+| ------ | ----------- |
+| Challenge Name | Intro to Pwntools |
+| Difficulty | Easy |
+| Tags | binary-exploitation, pwntools, buffer overflow, exploit development|
+
+---
 
 ## Index
 
@@ -294,6 +300,3 @@ We are root! And can grab the file from `/root/flag.txt`
 
 --------------------------------------------------------------------------------
 
-![](./.assets/complete.png)
-
---------------------------------------------------------------------------------
