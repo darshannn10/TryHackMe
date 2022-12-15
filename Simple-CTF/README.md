@@ -1,10 +1,20 @@
-# Simple CTF Writeup:
+# [Simple CTF](https://tryhackme.com/room/easyctf)
 	
-Alright, lets get started!
+> Darshan Patel
+
+## Overview
+
+| Tables | Description |
+| ------ | ----------- |
+| Challenge Name | Simple CTF |
+| Difficulty | Easy |
+| Tags | security, enumeration, priv-esc|
+
+---
 
 ## Enumeration:
 
-### NMap Scan:
+### Nmap Scan:
 
 First things first, I started with the following NMap scan:
 
