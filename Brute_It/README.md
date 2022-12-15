@@ -1,4 +1,4 @@
-# Brute it TryHackMe CTF
+# [Brute it](https://tryhackme.com/room/bruteit)
 
 > Darshan Patel
 
