@@ -1,6 +1,15 @@
-# Jack of All Trades CTF [TryHackMe](https://tryhackme.com/room/jackofalltrades)
+# [Jack-of-All-Trades](https://tryhackme.com/room/jackofalltrades)
+> Darshan Patel
 
-10th July 2021
+## Overview
+
+| Tables | Description |
+| ------ | ----------- |
+| Challenge Name | Jack-of-all-trades |
+| Difficulty | Easy |
+| Tags | conference, challenge, boot2root |
+
+---
 
 ## Index
 
@@ -8,9 +17,6 @@
 - [Gaining access](#gaining-access)
 - [Priviledge Escalation](#priviledge-escalation)
 
----
-
-![room_picture](./.assets/room_picture.jpeg)
 
 ---
 
@@ -36,17 +42,19 @@ The ports have been swapped - meaning we have been given the headache of reconfi
 
 Moving on to the website, we see its a simple static website but navigating the source code of the page yields some interesting information.
 
-![hint #1](./.assets/comment_hint.png)
+![comment_hint](https://user-images.githubusercontent.com/87711310/208108653-1158beed-050a-45a5-81f1-2b0a1e46e5b3.png)
+
 
 It is quickly evident that this is base64 encoded (notice the two equal signs at the end) and [decoding](https://gchq.github.io/CyberChef/) yields an interesting note.
 
-![Password](./.assets/password_note.png)
+![password_note](https://user-images.githubusercontent.com/87711310/208108671-0f1a8351-46ec-4ce2-866d-fa019980b62b.png)
+
 
 Navigating to `recovery.php` again yields an interesting result in the comments of the page.
 
 Time to decode it! I first decode it from bsae32 which seems to yield hex characters. So I convert it from hex to ascii and it is becoming evident that I am on the right path as I have some sort of rotation cipher. It's rot13! And we are given the following hint...
 
-![hint #2](./.assets/password_hint.png)
+![password_hint](https://user-images.githubusercontent.com/87711310/208108668-702c10e3-4f56-4d19-9bb3-80699cd9cb0c.png)
 
 Using the passphrase we got earlier, I tried decoding the steg image, which indicated I was on the right path but this was the wrong picture. Trying again with the jackinthebox picture...I failed but that left one last picture to be decoded: the header image.
 Decoding that was a success!
@@ -61,7 +69,8 @@ Going onto the page, there is the solitary test that we must `GET a 'cmd' and fu
 
 `http://<<IP>>:22/nnxhweOV/index.php?cmd=whoami`
 
-![whoami](./.assets/command.png)
+![command](https://user-images.githubusercontent.com/87711310/208108647-afaf6b57-1f33-4b73-9fcb-2527aec6f6e8.png)
+
 
 Constructing a python reverse shell after checking which python version is applicable:
 
@@ -93,10 +102,11 @@ I first checked if it was possible to use it to escalate priviledges but in the 
 $ strings /root/root.txt
 ```
 
-![root.txt](./.assets/root_flag.png)
+![root_flag](https://user-images.githubusercontent.com/87711310/208108680-fe69a884-cb8b-4a23-a53c-3c3818ac5b29.png)
+
 (The root flag has been cropped out of the screenshot)
 
 To snag the root flag! And we are _**complete!**_
 I really enjoyed this room despite it being a fairly simple one. Highly recommended for a quick pep-up if needed!
 
-![](./.assets/securi-tay.png)
+
