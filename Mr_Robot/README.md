@@ -159,7 +159,7 @@ sort fsocity.dic | uniq > fsocity_sorted.dic
 [80][http-post-form] host: 10.10.157.219   login: "Elliot"  password: "ER28-0652"
 ```
 
-[http://10.10.239.79/wp-admin/](http://10.10.239.79/wp-admin/)
+`http://10.10.239.79/wp-admin/`
 
 php_reverse_shell
 
