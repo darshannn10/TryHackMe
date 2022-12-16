@@ -1,8 +1,15 @@
-# Jacob the Boss CTF [TryHackMe](https://tryhackme.com/room/jacobtheboss)
+# [Jacob the Boss](https://tryhackme.com/room/jacobtheboss)
 
----
 
-![](./.assets/logo.jpeg)
+> Darshan Patel
+
+## Overview
+
+| Tables | Description |
+| ------ | ----------- |
+| Challenge Name | Jacod the Boss |
+| Difficulty | Medium |
+| Tags | security, dotclear, exploit, jboss |
 
 ---
 
@@ -181,6 +188,4 @@ A room which seems intimidating at first but it is super simple if you follow yo
 
 Recommended!
 
----
 
-![](./.assets/app.png)
