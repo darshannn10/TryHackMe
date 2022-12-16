@@ -1,7 +1,7 @@
 # Madness CTF TryHackMe
 ## This was easily the trickiest but most enjoyable room I have done yet
 
-##1. Scanning & Enumeration
+## 1. Scanning & Enumeration
 We do the below scans in parallel.
 
 ### 1.1. Port Scanning: 
