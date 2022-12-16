@@ -1,6 +1,16 @@
-# Privesc on linux
+# [Linux PrivEsc](https://tryhackme.com/room/linuxprivesc)
+> Darshan Patel
 
-IP=10.10.213.223
+## Overview
+
+| Tables | Description |
+| ------ | ----------- |
+| Challenge Name | Linux PrivEsc |
+| Difficulty | Medium |
+| Tags | priv-esc, linux|
+
+
+---
 
 `openssl passwd new a`
 `mkpasswd -m sha512 password`
