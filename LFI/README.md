@@ -1,5 +1,17 @@
-# Beginner LFI on TryHackMe
+# [Local FIle Inclusion](https://tryhackme.com/room/fileinc)
+> Darshan Patel
 
+## Overview
+
+| Tables | Description |
+| ------ | ----------- |
+| Challenge Name | Local FIle Inclusion |
+| Difficulty | Medium |
+| Tags | vulnerabilities, LFI, RFI, directory traversal|
+
+---
+
+main
 IP=`10.10.6.199`
 
 Ports:
