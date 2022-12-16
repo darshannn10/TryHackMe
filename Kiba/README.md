@@ -1,8 +1,16 @@
-# Kiba CTF [TryHackMe](https://tryhackme.com/room/kiba)
+# [Kiba](https://tryhackme.com/room/kiba)
+
+## Overview
+
+| Tables | Description |
+| ------ | ----------- |
+| Challenge Name | Kiba |
+| Difficulty | Easy |
+| Tags | RCE, elastic, python, linux capabilities|
 
 ---
 
-![](https://www.bujarra.com/wp-content/uploads/2018/11/kibana0.jpg)
+
 
 ---
 
@@ -302,4 +310,3 @@ A super simple and straight-forward room. Recommended for beginners and can be a
 
 ---
 
-![](https://c0.klipartz.com/pngpicture/33/502/gratis-png-elasticsearch-apache-licencia-consulta-lenguaje-kibana-buscar-thumbnail.png)
