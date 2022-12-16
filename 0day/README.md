@@ -10,9 +10,7 @@
 | Difficulty | Medium |
 | Tags | CVE, kernel exploit, shell shock|
 
----
 
-![](https://i.imgur.com/qnt7Eym.png)
 
 ---
 
