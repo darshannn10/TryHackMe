@@ -216,3 +216,5 @@ No Sockets found in /tmp/screens/S-joker.
 # whoami
 root
 ```
+
+### System Compromised :)
