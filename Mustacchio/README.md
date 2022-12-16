@@ -1,7 +1,15 @@
-# Mustacchio CTF [TryHackMe](https://tryhackme.com/room/mustacchio)
+# [Mustacchio CTF](https://tryhackme.com/room/mustacchio)
 
+> Darshan Patel
 
-![Mustacchio](./assets/Mustacchio.png)
+## Overview
+
+| Tables | Description |
+| ------ | ----------- |
+| Challenge Name | Mustacchio |
+| Difficulty | Easy |
+| Tags | xxe, enum, priv-esc, web|
+
 
 ---
 
@@ -102,4 +110,4 @@ And we now have the root flag!
 
 **_Complete!_**
 
-![Moustache Hacker](https://lovelace-media.imgix.net/getty/162913476.jpg)
+
