@@ -1,6 +1,14 @@
-# Smag Grotto
+# [Smag Grotto](https://tryhackme.com/room/smaggrotto)
 
-10 July 2021
+> Darshan Patel
+
+## Overview
+
+| Tables | Description |
+| ------ | ----------- |
+| Challenge Name | Smag Grotto |
+| Difficulty | East |
+| Tags | Wireshark |
 
 ---
 
@@ -42,7 +50,8 @@ Analysing the packet we notice two major things.
 
 Adding the hostname to `/etc/hosts` and using those credentials to login with, and are greeted with a splash page with the ability to send commands.
 
-![splashpage](./.assets/splashpage.png)
+![splashpage](https://user-images.githubusercontent.com/87711310/209357716-5e65d1d2-437e-475c-af50-7dc8b6b2a574.png)
+
 
 Initially, I tried `whoami` and `ls` but no output was returned. I then opened tcpdump.
 
@@ -72,7 +81,8 @@ And one minute of waiting later, we can now login in as jake! And grab the user 
 
 Now we check for sudo permissions and notice that we can `sudo apt-get` without need of a password. 
 
-![sudo apt-get](./.assets/sudo_perms.png)
+![sudo_perms](https://user-images.githubusercontent.com/87711310/209357717-c382e2c6-0449-4c52-988f-1dd24bdbe34c.png)
+
 
 Consulting gtfobins, we can run:
 
@@ -82,8 +92,7 @@ $ sudo apt-get update -o APT::Update::Pre-Invoke::=/bin/sh
 
 To escalate priviledges! And nab the root flag!
 
-And we are _**complete!**_
+And we are _**done!**_
 
 Enjoyable and straight-forward room.
 
-![smag grotto](./.assets/smag_grotto.png)
