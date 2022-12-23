@@ -1,8 +1,16 @@
-# UltraTech [TryHackMe](https://tryhackme.com/room/ultratech1) CTF
+# [UltraTech](https://tryhackme.com/room/ultratech1)
 
----
 
-![](./.assets/logo.png)
+> Darshan Patel
+
+## Overview
+
+| Tables | Description |
+| ------ | ----------- |
+| Challenge Name | UltrTech |
+| Difficulty | Medium |
+| Tags | security, pentest, enumeration, web |
+
 
 ---
 
@@ -138,8 +146,8 @@ Upgrade-Insecure-Requests: 1
 ```
 
 But even _more_ interestingly is this pinging going on between the ports.
+![ping](https://user-images.githubusercontent.com/87711310/209365893-cd5f3889-5733-4d6f-b81d-491e3be04c79.png)
 
-![ping](./.assets/ping.png)
 (The IP address is different as I restart machines whenever I feel they're too slow)
 
 ---
