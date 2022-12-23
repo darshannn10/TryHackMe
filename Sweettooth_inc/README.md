@@ -1,8 +1,14 @@
-# Sweettooth CTF [TryHackMe](https://tryhackme.com/room/sweettoothinc)
+# [Sweettooth Inc](https://tryhackme.com/room/sweettoothinc)
 
----
+> Darshan Patel
 
-![](./.assets/logo.jpeg)
+## Overview
+
+| Tables | Description |
+| ------ | ----------- |
+| Challenge Name | Sweettooth Inc. |
+| Difficulty | Medium |
+| Tags | database, secuirty |
 
 ---
 
