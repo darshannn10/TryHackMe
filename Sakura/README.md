@@ -1,4 +1,4 @@
-# Sakura OSint [TryHackMe](https://tryhackme.com/room/sakura)
+# [Sakura OSINT](https://tryhackme.com/room/sakura)
 
 > Darshan Patel
 
