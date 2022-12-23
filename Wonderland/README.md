@@ -1,7 +1,5 @@
 # [Wonderland](https://tryhackme.com/room/wonderland)
 
-#  [0day CTF](https://tryhackme.com/room/0day)
-
 > Darshan Patel
 
 ## Overview
