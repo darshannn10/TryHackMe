@@ -1,6 +1,28 @@
-# Beginners RootMe CTF on TryHackMe
+#  [RootMe](https://tryhackme.com/room/rrootme)
 
-IP=`10.10.89.238`
+> Darshan Patel
+
+## Overview
+
+| Tables | Description |
+| ------ | ----------- |
+| Challenge Name | RootMe |
+| Difficulty | Easy |
+| Tags | security, web, linux, priv-esc |
+
+
+
+---
+```bash
+export IP=10.10.89.238
+```
+
+---
+
+```bash
+nmap -v -sC -sV -A -v -oN nmap/initial.nmap 10.10.89.238
+```
+
 
 Ports:
 ```
