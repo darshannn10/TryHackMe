@@ -1,14 +1,15 @@
-# WebOSINT [TryHackMe](https://tryhackme.com/room/webosint)
+# [WebOSINT](https://tryhackme.com/room/webosint)
 
---------------------------------------------------------------------------------
+> Darshan Patel
 
-![](./assets/logo.jpeg)
+## Overview
 
---------------------------------------------------------------------------------
-
-## Index
-
---------------------------------------------------------------------------------
+| Tables | Description |
+| ------ | ----------- |
+| Challenge Name | WebOSINT |
+| Difficulty | Easy |
+| Tags | osint, webosint |
+---
 
 ### Whois Registration
 
@@ -128,6 +129,5 @@ Really enjoyed this - not the usual, reverse the image, find something but a mor
 
 - [SEO Best Practice](https://ahrefs.com/blog/seo-best-practices/)
 
---------------------------------------------------------------------------------
+---
 
-![](./assets/complete.png)
