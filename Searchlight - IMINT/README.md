@@ -1,7 +1,16 @@
-# Searchlight - IMINT [TryHackMe](https://tryhackme.com/room/searchlightosint)
+# [Searchlight - IMINT](https://tryhackme.com/room/searchlightosint)
+
+> Darshan Patel
+
+## Overview
+
+| Tables | Description |
+| ------ | ----------- |
+| Challenge Name | SearchLight |
+| Difficulty | Easy |
+| Tags | OSINT< geolocation |
 
 ---
-
 ### Task 1:
 
 `sl{ready}`
