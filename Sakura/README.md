@@ -1,11 +1,16 @@
 # Sakura OSint [TryHackMe](https://tryhackme.com/room/sakura)
 
+> Darshan Patel
 
----
+## Overview
 
-![](./.assets/logo.png)
+| Tables | Description |
+| ------ | ----------- |
+| Challenge Name | Sakura |
+| Difficulty | Easy |
+| Tags | OSINT, SOCMINT, SOCIAL MEDIA |
 
----
+
 
 ## Index
 - [TIP-OFF](#tip-off)
