@@ -1,4 +1,4 @@
-# ✅ [Introduction to Cyber Security](https://tryhackme.com/path-action/introtocyber/join)
+# \[Introduction to Cyber Security](https://tryhackme.com/path-action/introtocyber/join)
 
 ### Learn the core skills required to start a career in cyber security
 #### Cyber Security is a huge topic, and it can be challenging to know where to start. 
