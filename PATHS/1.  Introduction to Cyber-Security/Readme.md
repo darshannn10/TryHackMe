@@ -1,6 +1,6 @@
-# \[Introduction to Cyber Security](https://tryhackme.com/path-action/introtocyber/join)
+# [Introduction to Cyber Security](https://tryhackme.com/path-action/introtocyber/join)
 
-### Learn the core skills required to start a career in cyber security
+### Learn the core skills required to start a career in cyber security.
 #### Cyber Security is a huge topic, and it can be challenging to know where to start. 
 #### This path will give you a hands-on introduction to different areas within cyber, including:
 
@@ -16,7 +16,7 @@
 
 ---        
 
-## 1️⃣ Introduction to Cyber Security
+## 1. Introduction to Cyber Security
 ### Understand what is offensive and defensive security, and learn about careers available in cyber.
 - Intro to Offensive Security
     - Hack your first website (legally in a safe environment) and experience an ethical hacker's job.
@@ -28,7 +28,7 @@
     - Learn about the different careers in cyber security.
 
 
-## 2️⃣ Introduction to Offensive Security
+## 2. Introduction to Offensive Security
 ### Understand what Offensive Security entails, and practice breaking into computer systems by exploiting applications and networks.
 
 - Web Application Security
@@ -41,7 +41,7 @@
     - Learn about network security, understand attack methodology, and practice hacking into a target server.
 
 
-## 3️⃣ Introduction to Defensive Security
+## 3. Introduction to Defensive Security
 ### Learn Defensive Security by using digital forensics in an investigation and applying security operations to stop a live cyber attack.
 
 - Intro to Digital Forensics
