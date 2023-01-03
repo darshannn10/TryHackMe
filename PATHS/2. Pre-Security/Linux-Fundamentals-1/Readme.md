@@ -107,4 +107,3 @@ Terminate the machine.
 No answer neeeded
 ```
 
-Continue to Linux Fundamentals 2 writeup <a href="../Linux-Fundamentals-Part-2/README.md">here</a>
